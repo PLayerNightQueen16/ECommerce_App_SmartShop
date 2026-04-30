@@ -57,7 +57,7 @@ function App() {
 
   return (
   <div className="bg-[#07051A] min-h-screen text-white">
-    <BrowserRouter>
+    <Router>
       
       {/* Toast now matches dark theme */}
       <ToastContainer 
@@ -96,7 +96,7 @@ function App() {
       {/* Footer */}
       <Footer/>
 
-    </BrowserRouter>
+    </Router>
   </div>
 )
 }
