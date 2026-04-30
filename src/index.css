@@ -1,0 +1,111 @@
+/* @import "tailwindcss";
+
+:root {
+  --gold: #C89B5E;
+  --gold-deep: #A67C52;
+  --teal: #3CB7A5;
+  --turquoise: #7ED6C3;
+  --purple: #7A5C9E;
+  --ivory: #F7F4EF;
+  --beige: #E8DCCB;
+  --charcoal: #2B2B2B;
+  --gold-glow: #E5C98B;
+}
+
+body {
+  background-color: var(--ivory);
+  color: var(--charcoal);
+}
+
+
+.arrows{
+  height: 40px;
+  width: 40px;
+  margin: 1px;
+}
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+} */
+
+html, body, #root {
+  background: #07051A !important;
+  color: #F1F1F5 !important;
+  min-height: 100%;
+}
+
+
+@import "tailwindcss";
+
+
+:root {
+  /* 🌌 DARK DREAMY VERSION (same variable names, new soul) */
+
+  --gold: #E5C98B;          /* softer glowing gold */
+  --gold-deep: #C89B5E;     /* richer gold */
+
+  --teal: #2ED3C6;          /* neon teal */
+  --turquoise: #7ED6C3;     /* keep for highlights */
+
+  --purple: #7F3DFF;        /* main neon purple */
+
+  --ivory: #07051A;         /* now your BACKGROUND */
+  --beige: #0D0A2A;         /* secondary background */
+
+  --charcoal: #F1F1F5;      /* now TEXT (inverted) */
+
+  --gold-glow: #7F3DFF;     /* repurposed for glow */
+}
+
+/* 🌌 GLOBAL BACKGROUND */
+body {
+  background: radial-gradient(circle at top, #0D0A2A, #07051A);
+  color: var(--charcoal);
+}
+
+/* ✨ OPTIONAL: Smooth feel */
+* {
+  transition: all 0.2s ease;
+}
+
+/* 🎯 KEEP YOUR ORIGINAL STUFF */
+.arrows{
+  height: 40px;
+  width: 40px;
+  margin: 1px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
+
+/* 🚨 FORCE REMOVE ALL WHITE BACKGROUNDS */
+.bg-white,
+.bg-gray-50,
+.bg-gray-100,
+.bg-slate-50,
+.bg-neutral-50 {
+  background-color: transparent !important;
+}
+
+/* 🚨 FORCE DARK THEME OVERRIDE (FINAL FIX) */
+
+body, #root {
+  background: #07051A !important;
+}
+
+/* Kill ALL light backgrounds */
+[class*="bg-white"],
+[class*="bg-gray"],
+[class*="bg-slate"],
+[class*="bg-neutral"],
+[class*="bg-zinc"],
+[class*="bg-stone"] {
+  background-color: transparent !important;
+}
+
+/* Optional: give default dark surface */
+section, main, div {
+  background-color: transparent;
+}
